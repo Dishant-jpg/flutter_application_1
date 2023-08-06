@@ -2074,25 +2074,25 @@ class HomeScreen extends StatelessWidget {
                     "assets/images/Whatsapp logo.png",
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(left: 100)),
+                Padding(padding: EdgeInsets.only(left: 110)),
                 Container(
                     height: 28,
                     width: 28,
                     child: Image.asset("assets/images/camera.png")),
                 Padding(padding: EdgeInsets.only(left: 30)),
                 Container(
-                  height: 35,
-                  width: 35,
+                  height: 30,
+                  width: 30,
                   child: Icon(
                     FontAwesomeIcons.search,
                     color: const Color.fromARGB(113, 255, 255, 255),
                     size: 25,
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(left: 20)),
+                Padding(padding: EdgeInsets.only(left: 25)),
                 Container(
-                    height: 26,
-                    width: 26,
+                    height: 20,
+                    width: 20,
                     child: Image.asset("assets/images/dots.png")),
               ],
             ),
@@ -2154,9 +2154,9 @@ class HomeScreen extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 1)),
+                  Padding(padding: EdgeInsets.only(top: 160)),
                   Container(
-                      height: double.infinity,
+                      height: 1000,
                       width: double.infinity,
                       color: Color.fromARGB(255, 255, 255, 255),
                       child: ListView.builder(
