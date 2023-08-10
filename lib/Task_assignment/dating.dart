@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               height: 20,
               width: 20,
             ),
-            label: "Accout")
+            label: "Account")
       ]),
       // appBar: AppBar(
       //     // title: Text("Columns App"),
