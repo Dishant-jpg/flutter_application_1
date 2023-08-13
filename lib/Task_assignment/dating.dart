@@ -60,15 +60,38 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          Padding(padding: EdgeInsets.only(top: 30, left: 20)),
+          Padding(padding: EdgeInsets.only(top: 30, left: 30)),
           Row(
             children: [
-              Padding(padding: EdgeInsets.only(left: 20)),
-              Container(
-                child: CircleAvatar(
-                  radius: 25,
-                  backgroundImage: AssetImage("assets/images/i7.jpg"),
-                ),
+              SizedBox(
+                width: 25,
+              ),
+              Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 20)),
+                  Container(
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundImage: AssetImage("assets/images/i7.jpg"),
+                    ),
+                  ),
+                  Positioned(
+                    right: -2,
+                    bottom: -2,
+                    child: Container(
+                      height: 25,
+                      width: 25,
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Color.fromARGB(255, 11, 228, 15)),
+                    ),
+                  )
+                ],
               ),
               Column(
                 children: [
@@ -109,8 +132,10 @@ class HomeScreen extends StatelessWidget {
                   width: 45,
                   padding: EdgeInsets.only(left: 3),
                   child: Image.asset(
-                    "assets/images/notification.png",
+                    "assets/images/notifications-01.png",
+                    color: Colors.black,
                     fit: BoxFit.cover,
+                    scale: 0.5,
                   ),
                   decoration: ShapeDecoration(
                     shape: CircleBorder(

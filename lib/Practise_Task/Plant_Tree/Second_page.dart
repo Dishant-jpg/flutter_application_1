@@ -11,6 +11,36 @@ class _MytreeState extends State<Mytree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: NavigationBar(destinations: [
+        NavigationDestination(
+            icon: Image.asset(
+              "assets/images/home.png",
+              height: 20,
+              width: 20,
+            ),
+            label: "Home"),
+        NavigationDestination(
+            icon: Image.asset(
+              "assets/images/group.png",
+              height: 20,
+              width: 20,
+            ),
+            label: "Matches"),
+        NavigationDestination(
+            icon: Image.asset(
+              "assets/images/chat.png",
+              height: 20,
+              width: 20,
+            ),
+            label: "Message"),
+        NavigationDestination(
+            icon: Image.asset(
+              "assets/images/user.png",
+              height: 20,
+              width: 20,
+            ),
+            label: "Account")
+      ]),
       backgroundColor: Colors.white,
       body: Column(children: [
         Padding(padding: EdgeInsets.only(top: 40)),
@@ -198,34 +228,313 @@ class _MytreeState extends State<Mytree> {
             ],
           ),
         ),
-        Row(
-          children: [
-            SizedBox(
-              width: 25,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Stack(
-                children: [
-                  Container(
-                    height: 300,
-                    width: 190,
-                    clipBehavior: Clip.antiAlias,
-                    child: Image.asset(
-                      "assets/images/bactree.jpeg",
-                      fit: BoxFit.cover,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: Colors.amber,
-                    ),
-                  ),
-                  Text("\$39"),
-                ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(
+                width: 25,
               ),
-            ),
-          ],
-        )
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 320,
+                      width: 190,
+                      clipBehavior: Clip.antiAlias,
+                      child: Image.asset(
+                        "assets/images/bactree.jpeg",
+                        fit: BoxFit.cover,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.amber,
+                      ),
+                    ),
+                    Positioned(
+                      right: 10,
+                      top: 10,
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(15),
+                              bottomLeft: Radius.circular(10)),
+                          color: Color.fromARGB(208, 255, 255, 255),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "\$39",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                                color: Color.fromARGB(255, 96, 181, 21)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 120,
+                      left: 8,
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: Text(
+                          "Monstera",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(197, 0, 0, 0)),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 8,
+                      child: ElevatedButton(
+                        child: Text(
+                          "Add to cart",
+                          style: TextStyle(
+                              color: const Color.fromARGB(255, 0, 0, 0)),
+                        ),
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: Size(120, 45),
+                            primary: const Color.fromARGB(255, 255, 255, 255),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      right: 5,
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Image.asset(
+                            "assets/images/love-02.png",
+                            scale: 0.1,
+                            color: Colors.white,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.black),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 25,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 320,
+                      width: 190,
+                      clipBehavior: Clip.antiAlias,
+                      child: Image.asset(
+                        "assets/images/bactree.jpeg",
+                        fit: BoxFit.cover,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.amber,
+                      ),
+                    ),
+                    Positioned(
+                      right: 10,
+                      top: 10,
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(15),
+                              bottomLeft: Radius.circular(10)),
+                          color: Color.fromARGB(208, 255, 255, 255),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "\$39",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                                color: Color.fromARGB(255, 96, 181, 21)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 120,
+                      left: 8,
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: Text(
+                          "Monstera",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(197, 0, 0, 0)),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 8,
+                      child: ElevatedButton(
+                        child: Text(
+                          "Add to cart",
+                          style: TextStyle(
+                              color: const Color.fromARGB(255, 0, 0, 0)),
+                        ),
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: Size(120, 45),
+                            primary: const Color.fromARGB(255, 255, 255, 255),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      right: 5,
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Image.asset(
+                            "assets/images/love-02.png",
+                            scale: 0.1,
+                            color: Colors.white,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.black),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 25,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 320,
+                      width: 190,
+                      clipBehavior: Clip.antiAlias,
+                      child: Image.asset(
+                        "assets/images/bactree.jpeg",
+                        fit: BoxFit.cover,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.amber,
+                      ),
+                    ),
+                    Positioned(
+                      right: 10,
+                      top: 10,
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(15),
+                              bottomLeft: Radius.circular(10)),
+                          color: Color.fromARGB(208, 255, 255, 255),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "\$39",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                                color: Color.fromARGB(255, 96, 181, 21)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 120,
+                      left: 8,
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: Text(
+                          "Monstera",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(197, 0, 0, 0)),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 8,
+                      child: ElevatedButton(
+                        child: Text(
+                          "Add to cart",
+                          style: TextStyle(
+                              color: const Color.fromARGB(255, 0, 0, 0)),
+                        ),
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: Size(120, 45),
+                            primary: const Color.fromARGB(255, 255, 255, 255),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      right: 5,
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Image.asset(
+                            "assets/images/love-02.png",
+                            scale: 0.1,
+                            color: Colors.white,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.black),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ]),
     );
   }
