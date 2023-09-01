@@ -18,30 +18,35 @@ class _AnimationRState extends State<AnimationR> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                toHide = true;
-              });
-            },
-            child: Center(
-              child: AnimatedCrossFade(
-                  firstChild: Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.amber,
-                  ),
-                  secondChild: Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.blue,
-                  ),
-                  crossFadeState: toHide
-                      ? CrossFadeState.showSecond
-                      : CrossFadeState.showFirst,
-                  duration: Duration(seconds: 2)),
-            ),
+          Container(
+            height: 200,
+            width: 200,
+            child: Image.asset("assets/images/Mytip-01-01.png"),
           )
+          // GestureDetector(
+          //   onTap: () {
+          //     setState(() {
+          //       toHide = true;
+          //     });
+          //   },
+          //   child: Center(
+          //     child: AnimatedCrossFade(
+          //         firstChild: Container(
+          //           height: 200,
+          //           width: 200,
+          //           color: Colors.amber,
+          //         ),
+          //         secondChild: Container(
+          //           height: 200,
+          //           width: 200,
+          //           color: Colors.blue,
+          //         ),
+          //         crossFadeState: toHide
+          //             ? CrossFadeState.showSecond
+          //             : CrossFadeState.showFirst,
+          //         duration: Duration(seconds: 2)),
+          //   ),
+          // )
           // AnimatedRotation(
           //   turns: mturns,
           //   duration: Duration(seconds: 5),
