@@ -13,20 +13,16 @@ class _MyAnimationState extends State<MyAnimation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            
-          },
-          child: AnimatedContainer(
-            duration: Duration(seconds: 5),
-            height: 100,
-            width: 100,
-            color: Colors.blue,
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Hero(
+            tag: "id",
+            child: Container(
+              height: 300,
+              width: 300,
+              child: Image.asset("assets/images/Mytip-01-01.png"),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
